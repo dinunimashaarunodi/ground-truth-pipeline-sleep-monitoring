@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Recorded experiment data - not meant to be versioned in this repo
+data/
