@@ -5,3 +5,5 @@ venv/
 
 # Recorded experiment data - not meant to be versioned in this repo
 data/
+
+.idea/

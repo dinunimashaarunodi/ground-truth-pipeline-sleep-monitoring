@@ -209,7 +209,13 @@ def heartrate_status():
     return "Status recorded", 200
 
 
-# --- Posture (ESP32 IMU) ----------------------------------------------------
+# --- Posture (ESP32 IMU) -----------------------------------------------------
+# Superseded by the camera-based posture pipeline (see
+# ../webcam/README.md and DESIGN.md's "Posture: USB webcam" section) -
+# posture ground truth now comes from record_camera.py + posture_from_video.py
+# writing straight into the session folder, not through this endpoint.
+# Left in place (schema-flexible, costs nothing to keep) in case an IMU-style
+# device is ever wired back in; nothing currently posts to it.
 
 @app.route('/posture/record_batch', methods=['POST'])
 def posture_record_batch():
